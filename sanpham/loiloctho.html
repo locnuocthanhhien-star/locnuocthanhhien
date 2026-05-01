@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#b3c5ff",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-container": "#00714d",
+                    "tertiary": "#285d82",
+                    "outline": "#727687",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#424656",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-primary-container": "#f8f7ff",
+                    "surface-container": "#e5eeff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#6cf8bb",
+                    "on-background": "#0b1c30",
+                    "surface-dim": "#cbdbf5",
+                    "surface": "#f8f9ff",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary-fixed": "#001e30",
+                    "inverse-on-surface": "#eaf1ff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#dae1ff",
+                    "surface-tint": "#0054d6",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "surface-container-high": "#dce9ff",
+                    "primary": "#0050cb",
+                    "on-primary-fixed": "#001849",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary-fixed-dim": "#9bccf6",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "on-tertiary-container": "#f3f8ff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#0066ff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#0e4b6f",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c2c6d8",
+                    "tertiary-container": "#44769c",
+                    "on-secondary-fixed": "#002113",
+                    "secondary": "#006c49",
+                    "tertiary-fixed": "#cbe6ff",
+                    "inverse-surface": "#213145"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "80px",
+                    "lg": "48px",
+                    "base": "4px",
+                    "sm": "16px",
+                    "gutter": "24px",
+                    "md": "24px",
+                    "xs": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Inter"],
+                    "button": ["Inter"],
+                    "h2": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9ff;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md dark:bg-slate-900/80 border-b border-blue-100/50 dark:border-blue-900/50 shadow-sm shadow-blue-500/5 font-inter antialiased tracking-tight">
+<div class="flex justify-between items-center h-16 px-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-blue-700 dark:text-blue-400">Lọc nước Thanh Hiền</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Trang chủ</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1" href="#">Sản phẩm</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Giải pháp</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Tin tức</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Liên hệ</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/30">
+<span class="material-symbols-outlined text-outline text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Tìm kiếm phụ kiện..." type="text"/>
+</div>
+<div class="flex gap-3 text-slate-600">
+<button class="hover:text-blue-500 transition-all"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="hover:text-blue-500 transition-all"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-button text-button hover:bg-primary-container transition-all">Tư vấn ngay</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-8">
+<a class="hover:text-primary transition-colors" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Sản phẩm</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-semibold">Lõi lọc thô</span>
+</nav>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- SideNavBar -->
+<aside class="w-full md:w-64 flex flex-col gap-4 sticky top-24 h-fit">
+<div class="p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+<h2 class="font-h3 text-[18px] text-on-surface mb-1">Danh mục sản phẩm</h2>
+<p class="text-label-sm text-outline mb-6">Lọc nước tinh khiết</p>
+<div class="flex flex-col gap-2">
+<a class="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium rounded-lg px-3 py-2.5 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="filter_alt">filter_alt</span>
+<span class="font-label-sm">Lõi lọc thô</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2.5 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="Science">science</span>
+<span class="font-label-sm">Lõi chức năng</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2.5 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label-sm">Màng RO</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2.5 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm">Linh kiện</span>
+</a>
+</div>
+<button class="w-full mt-8 bg-surface-container text-primary font-button text-sm py-3 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-all">
+                        Yêu cầu báo giá
+                    </button>
+</div>
+<!-- Promotional Banner in Sidebar -->
+<div class="relative overflow-hidden rounded-xl bg-primary-container p-6 text-on-primary-container">
+<div class="relative z-10">
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Ưu đãi</span>
+<h4 class="font-h3 text-lg mt-2 leading-tight">Combo 3 Lõi 1-2-3</h4>
+<p class="text-xs opacity-90 mt-2 mb-4">Tiết kiệm 15% khi mua trọn bộ thay thế định kỳ.</p>
+<button class="text-xs font-bold underline">Xem chi tiết</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+</aside>
+<!-- Product Grid Section -->
+<div class="flex-1">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h1 class="font-h2 text-primary">Lõi lọc thô</h1>
+<p class="text-outline mt-1">Hệ thống lọc bảo vệ màng RO và linh kiện máy lọc</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-outline-variant rounded-lg hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<select class="bg-white border border-outline-variant rounded-lg text-sm px-4 focus:ring-primary focus:border-primary">
+<option>Mới nhất</option>
+<option>Giá thấp đến cao</option>
+<option>Giá cao đến thấp</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Lõi lọc số 1 PP 5 micron" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A professional high-resolution studio shot of a pristine white polypropylene sediment filter cartridge against a minimalist soft blue background. The lighting is clinical and bright, highlighting the fine fiber texture of the filter. The overall aesthetic is pure, clean, and technologically precise, consistent with a premium water filtration brand's visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvDj9d6FrhckjiVmUg3P5X0604OK8VVgVxNiT3XNeESDud2W4725cCnlUiq7zABvI7OL6XnDF1CrIffeLJMVu4hWQRC_WQRoqHxzDvEoS0uEk7O-Yo-_Y986lNANfGw6dD3IB3oHgUVAuewmtLprGr1EHhdHvtdrDB8qzBoulbrqSmMrAq7myFEJ2_HU-iOsz7BgCZFx_pZWiCL1PebWtRu1-I5QHE2kMlOQiyAGl132EBlhyzrwZv0r_BZIphbe51Zk87q6IFA5U"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-secondary-container text-on-secondary-container text-[11px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                    Sẵn hàng
+                                </span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(128)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Lõi lọc số 1 PP 5 Micron - Sợi bông nén cao cấp</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Loại bỏ bùn đất, rỉ sét, các loại tạp chất thô có kích thước &gt; 5 micron.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">85.000đ</span>
+<span class="text-xs text-outline line-through">105.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Lõi lọc số 2 OCB-GAC" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A sleek black carbon block water filter cartridge shown in a high-key studio environment with soft shadows. The cartridge surface has a subtle matte texture, and the plastic end caps are perfectly clean. The scene is illuminated with professional cool-toned lighting to evoke a sense of clinical purity and industrial reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeoH69R6EhOCp5Xt2BRh9CXilteIC-yv1NXy8GwP8X8vG9y5fgWq7NdSwAnTMfx7XaJYgfawCQXskombXw7PMe76BZ8lWCr0A7FOHra8GLO7huoLat08DrXXLtjim35XHIGIHH_07BKokThV-qmPlmxmyBQXSIGHssBzSPW8xzQuxGnPZmVMc56TjtKadMyg_hLpOHxNLp2a8o2G2dZVmbaD2mm0AvvTVMi2wxSBu5Eka84c_tCROi_inoZ2YpNEKEiSoU14tRmCo"/>
+<span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[11px] font-bold px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                ISO 9001
+                            </span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-slate-200 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(92)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Lõi lọc số 2 OCB-GAC - Than hoạt tính dạng hạt</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Hấp phụ chất hữu cơ, thuốc trừ sâu, khử mùi clo dư trong nước sinh hoạt.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">115.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Lõi lọc số 3 PP 1 micron" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of a white sediment filter with a finely woven texture, presented in a minimalist, bright aesthetic. The light-mode UI style is reflected in the clean, airy lighting of the photograph. The filter is perfectly centered, conveying precision and purity against a soft grey-blue gradient backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn3yCfrFWJSX3sI-FNTVVor2zkTTc1UglIfmQ80tdZmQKrzgxFFtB9LkBukm81414LX8heQqATKoxXhz4IaKyf5CsGVHY9SqUgv5GBuENHVKDCKXfurIoDwc9fxMXYjOpLAAI-QOzTdkHgUmnsbbW5HisA3lOgVditZsqNXleNsfRIe8qDsFZrkOZy9lSHMXXDeQYiKQ1sWbGfCeeAJx8-HkyWU_z19YuidTvViP-EWdnXnsFblL0c1xdBlIe1AwxLXMk9YeCj76o"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(215)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Lõi lọc số 3 PP 1 Micron - Sợi bông nén tinh</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Loại bỏ tạp chất kích thước siêu nhỏ, bảo vệ tuyệt đối màng RO phía sau.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">95.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Lõi lọc số 3 CTO" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A detailed product photo of an Activated Carbon Block filter (CTO) for water treatment. The carbon is a deep charcoal grey with a clean, smooth finish, featuring blue plastic caps. The image uses a clean-white background with professional studio lighting that emphasizes the product's high-tech filtration capabilities and purity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlzrtvSYjnVZaC0cDi_nHIxqLG6uFPBPkVD0xqi0gdtOuYVUBY17FOHj-OUQKw8DnMYJpgrS7XxA52kD0MJEHZkfNj7VcjfenFkkFE_z-PU856XaQgkNulqcnvq8EC3DBvKWrPFfhp2hPag7uM_b9CdvqZwA1WWMB1tlKp_IrZDNdSt7oM0vlIJ8G7IhezV9xZ-svJWIFJuDnJM3vUQylxNR_xcogaEZlxiYRIswfDEFYiybo8g3Jn2Eqi7c8pPhqLnQIIwLxt5Ko"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-slate-200 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(54)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Lõi lọc số 3 CTO - Than hoạt tính nén Block</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Lọc sạch chất hữu cơ độc hại và màu mùi lạ trong nước một cách triệt để.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">120.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Combo 3 lõi 1-2-3" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A high-end water filter housing unit and its replacement cartridge set, arranged neatly on a polished white surface. The scene is bathed in bright, natural high-key lighting, creating an atmosphere of safety, family health, and technological reliability. The color palette consists of cool blues and brilliant whites, emphasizing a corporate and modern brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-v2Ugmziz8tu68GRdIbMm1ysVTHCpyjVjkS-DOoRtLxADohyuAYU7DNLlUdxj1FnSmICvKpt223ZH57-v3Cq1qucl2tKd0OZrKMHVgWiGr3SBvOsJRWTX0Cs-GBEEoTbfcP_RnPHXhu23Ll9IvPrdcpz5bEAoboHCTcfS-VAXTSdD0DfWobaZC6SLq9P7B5WOnGKi4u5VOebc3o6vgfifQiWY_M4Xna4IeJdINK5hu2npGzJWqlwHzLmsmNKC9dkRYK0_MqPxztE"/>
+<span class="absolute top-4 left-4 bg-error-container text-on-error-container text-[11px] font-bold px-2 py-1 rounded-full">-15% Combo</span>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(456)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Bộ 3 lõi lọc thô 1, 2, 3 tiêu chuẩn cho máy RO</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Giải pháp kinh tế thay thế định kỳ giúp máy lọc nước luôn hoạt động bền bỉ.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">249.000đ</span>
+<span class="text-xs text-outline line-through">295.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 border border-slate-100 flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-slate-50 p-6 flex items-center justify-center">
+<img alt="Lõi lọc Cation khử đá vôi" class="max-h-full object-contain group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph of fresh water droplets on a transparent surface, with a high-end water filtration cartridge blurred artistically in the background. The lighting is bright and high-contrast, with clear refractive qualities that mimic looking through pure water. The overall color scheme is monochromatic blues and whites, projecting a sense of extreme clarity and purity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzbxvKcZesecPv4VuZ75MyClo2rLT2BKv3DYmeo4-s48oQdXSHikMI5CWTtuZbXvrL3R3Qz_uk8Tq_elyCwR8RstpdpVgwIIxlBLlvK9YdV94GXRymyj5TNGCKZFcici6CEyNHmghN9yQmel1B1ul9eD6n_4A05RuqjVNnRwmPZfVGSwm-8SjvLguCn_fJxVzipW0h7PUwlHAHBdC_EvKfsx0RWs7kmMrpb6ctCUaa3K0FLF_Kow6hdV6a86Cb1WZn_ENeU70JWPg"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-slate-200 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-outline ml-1">(31)</span>
+</div>
+<h3 class="font-h3 text-base text-on-surface mb-2 leading-tight group-hover:text-primary transition-colors">Lõi lọc Cation - Xử lý nước cứng, khử đá vôi</h3>
+<p class="text-sm text-outline line-clamp-2 mb-4">Lõi chứa hạt nhựa trao đổi ion làm mềm nước, chống bám cặn trắng khi đun nấu.</p>
+<div class="mt-auto flex items-center justify-between">
+<div>
+<span class="block text-primary font-bold text-lg">185.000đ</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all shadow-sm">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors">3</button>
+<span class="text-outline mx-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Trust Badges Section -->
+<section class="bg-white py-xl mt-xl border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+</div>
+<h4 class="font-button text-on-surface">Cam kết chính hãng</h4>
+<p class="text-xs text-outline mt-2">Đền bù 200% nếu phát hiện hàng giả</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+</div>
+<h4 class="font-button text-on-surface">Giao hàng nhanh</h4>
+<p class="text-xs text-outline mt-2">Nội thành Hà Nội trong 2h làm việc</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">build_circle</span>
+</div>
+<h4 class="font-button text-on-surface">Hỗ trợ kỹ thuật</h4>
+<p class="text-xs text-outline mt-2">Kỹ thuật viên tay nghề cao phục vụ 24/7</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+</div>
+<h4 class="font-button text-on-surface">99.9% Purity</h4>
+<p class="text-xs text-outline mt-2">Đạt chuẩn nước uống đóng chai QCVN 6-1</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 font-inter text-xs md:text-sm">
+<div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-blue-700 dark:text-blue-400">Lọc nước Thanh Hiền</div>
+<p class="text-slate-500 dark:text-slate-400 max-w-xs">© 2024 Lọc nước Thanh Hiền. Giải pháp nước sạch tiêu chuẩn ISO.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors duration-200" href="#">Chính sách bảo hành</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors duration-200" href="#">Hướng dẫn lắp đặt</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors duration-200" href="#">Hỗ trợ kỹ thuật</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors duration-200" href="#">Hệ thống cửa hàng</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-lg">public</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-lg">call</span>
+</button>
+</div>
+</div>
+</footer>
+</body></html>

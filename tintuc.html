@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#6cf8bb",
+                    "on-primary-fixed-variant": "#003fa4",
+                    "secondary-fixed": "#6ffbbe",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9ff",
+                    "primary-fixed": "#dae1ff",
+                    "on-surface-variant": "#424656",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#f8f7ff",
+                    "on-secondary-fixed-variant": "#005236",
+                    "error": "#ba1a1a",
+                    "surface": "#f8f9ff",
+                    "outline-variant": "#c2c6d8",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#eff4ff",
+                    "background": "#f8f9ff",
+                    "on-tertiary-fixed-variant": "#0e4b6f",
+                    "on-tertiary-container": "#f3f8ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-tertiary-fixed": "#001e30",
+                    "surface-container-high": "#dce9ff",
+                    "primary-container": "#0066ff",
+                    "secondary": "#006c49",
+                    "on-background": "#0b1c30",
+                    "secondary-fixed-dim": "#4edea3",
+                    "surface-variant": "#d3e4fe",
+                    "surface-dim": "#cbdbf5",
+                    "surface-tint": "#0054d6",
+                    "surface-container-highest": "#d3e4fe",
+                    "surface-container": "#e5eeff",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#cbe6ff",
+                    "on-primary-fixed": "#001849",
+                    "on-secondary-fixed": "#002113",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#44769c",
+                    "outline": "#727687",
+                    "tertiary-fixed-dim": "#9bccf6",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#b3c5ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "primary": "#0050cb",
+                    "on-surface": "#0b1c30",
+                    "tertiary": "#285d82",
+                    "on-secondary-container": "#00714d",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "sm": "16px",
+                    "md": "24px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "h3": ["Inter"],
+                    "button": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-b border-blue-50/50 bg-white/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,102,255,0.08)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-xl font-bold tracking-tighter text-blue-600">Lọc nước Thanh Hiền</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Trang chủ</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Sản phẩm</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Giải pháp</a>
+<a class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1" href="#">Tin tức</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Liên hệ</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 rounded-full border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all w-64" placeholder="Tìm kiếm tin tức..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-button hover:bg-primary-container transition-all shadow-lg active:scale-95">Tư vấn ngay</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-xl">
+<!-- News Header & Categories -->
+<section class="max-w-7xl mx-auto px-6 mb-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-md">
+<div>
+<span class="text-primary font-semibold tracking-wider text-label-sm uppercase">Cập nhật mới nhất</span>
+<h1 class="font-h1 text-h1 text-on-surface mt-2">Tin tức &amp; Kiến thức</h1>
+<p class="text-body-lg text-on-surface-variant mt-4 max-w-2xl">Chia sẻ kinh nghiệm sử dụng nước sạch, cập nhật công nghệ lọc nước tiên tiến nhất và các chương trình ưu đãi độc quyền.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 py-4 border-y border-outline-variant/30">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary font-button shadow-md">Tất cả</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all font-button">Sức khỏe &amp; Nước</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all font-button">Tin tức công ty</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all font-button">Khuyến mãi</button>
+<button class="px-6 py-2 rounded-full bg-white border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all font-button">Hướng dẫn sử dụng</button>
+</div>
+</section>
+<!-- Featured Post - Bento Layout Influence -->
+<section class="max-w-7xl mx-auto px-6 mb-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 group relative overflow-hidden rounded-xl bg-white shadow-[0_20px_50px_rgba(0,102,255,0.06)] hover:shadow-[0_30px_60px_rgba(0,102,255,0.12)] transition-all duration-500">
+<div class="aspect-[16/9] w-full relative">
+<img alt="A premium high-tech water filtration system" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYcUao4lOVJgaca5k0Zpy60mbbjMdKMnjjPSoryCyxHhYau09CQ5GBnLyCqUer2hQYU1Hx0Tgg7zRQzfahLDKDqCcaqmkhswUE9495jcgFM05v_5QFbL4QwbhSAMbzaCXHsbVx9Agh16HU6IJv_0etUg11XT9joLDVQpsW3Oqz4ZHBYDDJxv7vWKtQg_dFSTMYgiTIjqJohgEbHr1UVUjNBr-If31svJDTCE4Jr47xvqhGVvK-nWG6UTddh7eNHJm3kNOg5-0McOA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="inline-block px-3 py-1 rounded bg-secondary-container text-on-secondary-container text-label-sm font-bold mb-4">NỔI BẬT</span>
+<h2 class="text-white font-h2 text-h2 mb-4 leading-tight group-hover:text-primary-fixed transition-colors">Cách nhận biết nguồn nước gia đình bị ô nhiễm và giải pháp xử lý triệt để 2024</h2>
+<div class="flex items-center text-white/80 gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="text-label-sm">15 Tháng 5, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="text-label-sm">Chuyên gia Thanh Hiền</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bg-primary p-8 rounded-xl text-on-primary flex flex-col justify-center relative overflow-hidden group">
+<div class="absolute -right-10 -bottom-10 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Đăng ký nhận cẩm nang nước sạch</h3>
+<p class="text-body-md opacity-90 mb-6">Nhận ngay bộ tài liệu hướng dẫn bảo vệ sức khỏe gia đình qua nguồn nước tinh khiết.</p>
+<form class="space-y-4">
+<input class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 placeholder:text-white/60 focus:bg-white/20 focus:outline-none transition-all" placeholder="Email của bạn" type="email"/>
+<button class="w-full bg-white text-primary font-button py-3 rounded-lg hover:bg-surface-bright transition-all">Gửi yêu cầu</button>
+</form>
+</div>
+<div class="bg-surface-container-high p-8 rounded-xl border border-blue-100 flex items-center justify-between group cursor-pointer">
+<div>
+<h4 class="font-h3 text-xl text-primary mb-1">Khuyến mãi hè 2024</h4>
+<p class="text-body-md text-on-surface-variant">Giảm đến 30% cho máy lọc RO</p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Articles Carousel -->
+<section class="max-w-7xl mx-auto px-6 relative overflow-hidden">
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-h2 text-h3 flex items-center gap-3">
+<span class="w-2 h-8 bg-primary rounded-full"></span>
+                Bài viết mới nhất
+            </h3>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all group" onclick="document.getElementById('article-slider').scrollBy({left: -400, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all group" onclick="document.getElementById('article-slider').scrollBy({left: 400, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-gutter pb-8 no-scrollbar scroll-smooth" id="article-slider">
+<!-- Article Card 1 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsGYIcGWxge6ndvavl3gErZvsrVCjhq-puIgh-R9H4R7VljqCjbmF2RaUU6UXjtxLY5Q_khQC81JnMsj_mc3J8AWtMD96PaJ0t_zC9bizGMuWhHjtJRVE6y8XP6rR6dMrisMJj0ncOTWbGwq8hUtF0PMcav3dE7I6v1JG3FOkIrC8Hs0Xz4ouUSU9ZZmESTEUot9W2Idrok5Tn4rMlm-yD0TRVx05aG5tlCm7Lz4VE7SINlmDxqgajAANWXACxaU9wkLixmcco7uo"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">SỨC KHỎE</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 2 giờ trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 1.2k</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Lợi ích kinh ngạc của nước ion kiềm đối với hệ tiêu hóa bạn nên biết</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Nước ion kiềm không chỉ đơn giản là nước sạch, nó còn mang lại nhiều lợi ích vượt trội cho sức khỏe đường ruột và cân bằng độ pH...</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 2 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAI2R5PqLFI4dDez-2H5coAqCfm-7V1Q8y8vdI46rZTR_oCydPlL563ozbCOa8OwN9uuBx82XsIxtiY0EOxFEOw-RpRCDeWl5KRYQvXJt-rXJaTNbRbNU56dtL-G_zfMPvPU7ONZBSSLuSp7G9xcj8YYO2DiH45RHPLvWEy8D_-zB27l2D-DZPG_Spb-Q23hgJEMRSpvVQzr7P5c4IyhlUucXCRUn5dYqJywyRh5GGBKKzsG_xV29TLZMDTeP72XstzqxFj3hevKw"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">KỸ THUẬT</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 1 ngày trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 850</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Khi nào bạn cần thay lõi lọc nước? Dấu hiệu và thời gian định kỳ chuẩn nhất</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Việc thay lõi lọc đúng hạn quyết định 90% chất lượng nước đầu ra. Hãy cùng Thanh Hiền tìm hiểu bảng thời gian chuẩn...</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 3 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAyADpjxty0AbcbbN-dgwV7LnNtI4AvaiVfJfsylBxZ8DNA6Ja6jax81loxDP7A__EThF05LGlOMrJ6JDemB4GugFmoSQ1piUxQU6hT7kC9dTPGKmzvVbMCNNudkinlLKaulZxYHz6GLqAcRgrmJ_zgJzCHB6ni_vLMhS066zKGrreiljFuczgrjHMKEe7oFgHSr9U4Q7jXlFs5u4Aw_3ymDiNMnoI2z12iokS-7uIKoGWpUVw9bZQXKORgP7Ams5kv7eQwc4Z9rU"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">CÔNG NGHỆ</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 3 ngày trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 2.1k</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Công nghệ lọc Nano và RO: Đâu là sự lựa chọn tối ưu cho gia đình bạn?</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">So sánh chi tiết hai công nghệ lọc phổ biến nhất hiện nay, giúp bạn chọn được thiết bị phù hợp với đặc điểm nguồn nước...</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 4 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbB5TKeET3kMQsVY_-R98WVnClQlYmnujwjdNinuZrR7lqoRYIwGihUNyBhOBAi0P_aqKYLwU3WrcgtAWJp5alWuPwbkC3qww50_1TF9JGrbOGNtLJrTUJxXyd0K2QIHcYOy8_Gkjx22YUTQFSBfHE2lzpDJ0LKlUhJq5vAPFvPbCYo-0gSz5yTes6Wq0Q_puiQ0V2SmmK-x8ErRZZ3GHbdUUxiToAjonPzDQvM_UDlakTE2xZJ4n7SXkdrPRsYyFkOt-BEFejz0I"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">ĐỜI SỐNG</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 4 ngày trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 1.5k</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Tầm quan trọng của việc uống đủ nước sạch mỗi ngày đối với làn da</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Uống nước sạch không chỉ tốt cho sức khỏe bên trong mà còn là "mỹ phẩm" tự nhiên rẻ nhất cho làn da rạng rỡ mỗi ngày.</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 5 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzQJ_CCjaCktteHEu7dyefSr0GPuTnnzzdvA61ctthAZq2CP9rBHg6dWopgVQkU1AemlIYe0uENTWJjBr3QD31c0NneUlGPVcRgk6nzAU2lBZgWZyUIkgKLieA_Ipn0Wn9MZeyNXou0AUob19jedN7HQDYK6M1JVeWQva-b4CoQREaryJ46Ki5DL8cR_f_RvIYYj6CHX9W9oHp_ojMvAX4AwEcT-PZyLsM1g4WHjeskdKlRFa-yudilOPe4V1CKmrXA3O194JuwDI"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">GIA ĐÌNH</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 5 ngày trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 920</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Mẹo nhỏ giúp trẻ em thích uống nước lọc hơn thay vì nước ngọt có ga</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Tập thói quen uống nước lọc cho trẻ ngay từ sớm là cách tốt nhất để bảo vệ răng miệng và hệ tiêu hóa của bé.</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 6 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtXGqseGmcuOU8LK5sypwmx72i1i3GLOj488n8fUv5P7kA0yTpjBDz8NzfeR4sq31KXhSkRXAhFsTI03KJNZSVKT8CqEum-e9pEN6O6wofL4-fcdhaPNRFs46Cu_8VNmZFUEeOhHs1VPvLw-Y9B7YA-XhOMzg-78e1vMIYJ2lgxM9Ipkz6AdvKiWZib0uFUF0Jzfgj5ZwbTqnwQn3BfCShfAOL7Sk2S6ljG-MsSLRj481-kaX1gfCn7MpEcCX_Hmw83a3w46MTios"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">MÔI TRƯỜNG</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 1 tuần trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 1.8k</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Máy lọc nước RO giúp giảm thiểu rác thải nhựa đại dương như thế nào?</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Thay vì mua nước đóng chai, sử dụng máy lọc nước tại nhà là giải pháp bền vững bảo vệ môi trường xanh.</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 7 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXFlLZRqaYSKrECbtApq1WYKfSOgdyFZFKGBvzsYnVmgF1p2nFxNj02G7OOZIiIQGqHRy0PcYp-Apzi-sS6AhRireE3pE_NJM4gw3pDqUX6Qr2b2NJXpMANi9a5LCOEK9GKi7f0Re9d1rMhHmRjxDlnCui_NMydNbxl2t_tPbCdLCfUDOz6gH8ZmuVZZrIR33gXN-7533MJ3AwyvHf-XU3sDwB4pGKW7vVjRHLdQbl3So0EvFPYJUgvHkXVZeooGvQCAhMqTNlQ30"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">KỸ THUẬT</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 1 tuần trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 640</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Hướng dẫn vệ sinh vòi nước và hệ thống ống dẫn tại nhà đơn giản nhất</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Đảm bảo nguồn nước tinh khiết từ lõi lọc đến tận tay người dùng bằng cách vệ sinh đầu vòi định kỳ.</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article Card 8 -->
+<article class="min-w-[320px] md:min-w-[380px] bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,102,255,0.04)] border border-outline-variant/30 hover:-translate-y-2 transition-all duration-300 group">
+<div class="aspect-video relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN7hnMDb_MyA3_6FhnvVh2IuwWmUyVS9AbSmKwuoZwahm793eHTin5Wdw9RH9-pXT5azduRNpfW642vZYMucBjs_efxgR_vex_cWpp1D4sVGl1qVscGeM2j_dhRwJfoN9wl3GZkeXPfXTHPufuXMZA6RI53e3QuaYQXy30gqAeebZPbmHnGexv6ju0oH3qIdVAup4xYtsw_NMTW8FkwNLMGWD7B5Cx1v4sq36af4FDFcGUM-0EocFAFbB5gS6ez1MkQ9nNkf9Wo6w"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 backdrop-blur text-primary text-xs font-bold shadow-sm">TIN TỨC</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-4 text-slate-400 text-xs mb-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 10 ngày trước</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">visibility</span> 3.4k</span>
+</div>
+<h4 class="font-h3 text-xl mb-3 line-clamp-2 hover:text-primary transition-colors cursor-pointer">Lọc nước Thanh Hiền khai trương chi nhánh mới tại khu vực Quận 7</h4>
+<p class="text-on-surface-variant text-body-md line-clamp-3 mb-6">Mở rộng hệ thống để phục vụ khách hàng tốt hơn với nhiều ưu đãi hấp dẫn trong tuần lễ khai trương.</p>
+<a class="text-primary font-button flex items-center gap-2 group/link" href="#">
+                            Đọc tiếp 
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-xl gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white transition-all">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white shadow-lg">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white transition-all">3</button>
+<span class="flex items-center px-2">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white transition-all">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-on-surface-variant hover:bg-primary hover:text-white transition-all" onclick="document.getElementById('article-slider').scrollBy({left: 400, behavior: 'smooth'})">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Newsletter Section with Glassmorphism -->
+<section class="max-w-7xl mx-auto px-6 mt-xl">
+<div class="relative rounded-3xl overflow-hidden p-12 lg:p-20 bg-gradient-to-br from-primary to-blue-800 text-center text-on-primary">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-container rounded-full blur-[120px] translate-x-1/4 translate-y-1/4"></div>
+</div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-h1 text-h2 mb-6">Đừng bỏ lỡ bất kỳ tin tức nào</h2>
+<p class="text-body-lg opacity-90 mb-10">Đăng ký để nhận những thông tin mới nhất về sức khỏe và công nghệ lọc nước từ chuyên gia của chúng tôi.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-6 py-4 rounded-full bg-white text-on-surface focus:outline-none focus:ring-4 focus:ring-white/20" placeholder="Nhập địa chỉ email của bạn" type="email"/>
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-fixed font-button rounded-full hover:shadow-[0_0_20px_rgba(111,251,190,0.4)] transition-all">Đăng ký ngay</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 mt-xl">
+<div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-slate-800 mb-4">Lọc nước Thanh Hiền</div>
+<p class="text-sm font-inter text-slate-500 leading-relaxed">© 2024 Lọc nước Thanh Hiền. Giải pháp nước sạch tinh khiết cho mọi gia đình Việt.</p>
+<div class="flex gap-4 mt-6">
+<a class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all shadow-sm" href="#">
+<span class="material-symbols-outlined text-xl">language</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-semibold text-slate-800 mb-6">Về chúng tôi</h5>
+<ul class="space-y-4">
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Câu chuyện thương hiệu</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Hệ thống cửa hàng</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Tuyển dụng</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-800 mb-6">Hỗ trợ khách hàng</h5>
+<ul class="space-y-4">
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Chính sách bảo hành</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Chính sách đổi trả</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-500 hover:underline transition-all" href="#">Bảo mật thông tin</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-semibold text-slate-800 mb-6">Liên hệ</h5>
+<ul class="space-y-4">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span class="text-sm font-inter text-slate-500">123 Đường Nước Sạch, Quận 1, TP. HCM</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span class="text-sm font-inter text-slate-500">Hotline: 1900 8888</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span class="text-sm font-inter text-slate-500">info@thanhhienwater.vn</span>
+</li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col gap-4">
+<!-- Zalo/Chat Button -->
+<a class="w-16 h-16 bg-white text-blue-600 rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,102,255,0.2)] border border-blue-50 hover:scale-110 transition-transform group relative" href="#">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="absolute right-full mr-4 bg-white px-3 py-1.5 rounded-lg shadow-md text-sm font-medium text-slate-700 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat Zalo</span>
+</a>
+<!-- Hotline Button -->
+<a class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,102,255,0.3)] hover:scale-110 transition-transform group relative overflow-hidden" href="tel:19008888">
+<div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+<span class="material-symbols-outlined text-3xl relative z-10" style="font-variation-settings: 'FILL' 1;">call</span>
+<span class="absolute right-full mr-4 bg-primary text-white px-3 py-1.5 rounded-lg shadow-md text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Hotline: 1900 8888</span>
+</a>
+</div>
+<script>
+  const slider = document.getElementById('article-slider');
+  let scrollAmount = 0;
+  const slideWidth = 400;
+
+  function autoScroll() {
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    }
+  }
+
+  let intervalId = setInterval(autoScroll, 2000);
+
+  // Pause on hover for better user experience
+  slider.addEventListener('mouseenter', () => clearInterval(intervalId));
+  slider.addEventListener('mouseleave', () => intervalId = setInterval(autoScroll, 3000));
+</script></body></html>

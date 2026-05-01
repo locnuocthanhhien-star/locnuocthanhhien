@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b3c5ff",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-surface": "#0b1c30",
+                        "on-secondary-container": "#00714d",
+                        "tertiary": "#285d82",
+                        "outline": "#727687",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#424656",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-primary-container": "#f8f7ff",
+                        "surface-container": "#e5eeff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#6cf8bb",
+                        "on-background": "#0b1c30",
+                        "surface-dim": "#cbdbf5",
+                        "surface": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary-fixed": "#001e30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dae1ff",
+                        "surface-tint": "#0054d6",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#0050cb",
+                        "on-primary-fixed": "#001849",
+                        "background": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#d3e4fe",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-fixed-dim": "#9bccf6",
+                        "on-primary-fixed-variant": "#003fa4",
+                        "on-tertiary-container": "#f3f8ff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#0066ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#0e4b6f",
+                        "secondary-fixed": "#6ffbbe",
+                        "outline-variant": "#c2c6d8",
+                        "tertiary-container": "#44769c",
+                        "on-secondary-fixed": "#002113",
+                        "secondary": "#006c49",
+                        "tertiary-fixed": "#cbe6ff",
+                        "inverse-surface": "#213145"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "xs": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "button": ["Inter"],
+                        "h2": ["Inter"],
+                        "h1": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 80, 203, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md dark:bg-slate-900/80 border-b border-blue-100/50 dark:border-blue-900/50 shadow-sm shadow-blue-500/5 font-inter antialiased tracking-tight transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-16 px-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold text-blue-700 dark:text-blue-400">Lọc nước Thanh Hiền</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Trang chủ</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1" href="#">Sản phẩm</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Giải pháp</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Tin tức</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Liên hệ</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-3 py-1.5 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-outline text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Tìm kiếm sản phẩm..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-600 hover:text-blue-500 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 text-slate-600 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hidden md:block bg-primary text-on-primary px-5 py-2 rounded-full font-button text-button hover:bg-primary-container transition-all">
+                        Tư vấn ngay
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto flex gap-gutter py-lg px-6">
+<!-- SideNavBar -->
+<aside class="hidden md:block w-64 flex-shrink-0 sticky top-24 h-fit">
+<div class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-6 flex flex-col gap-4">
+<div class="mb-2">
+<h2 class="font-h3 text-h3 text-primary mb-1">Danh mục sản phẩm</h2>
+<p class="text-xs text-slate-500 uppercase tracking-widest font-semibold">Lọc nước tinh khiết</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="filter_alt">filter_alt</span>
+<span class="font-label-sm text-label-sm">Lõi lọc thô</span>
+</a>
+<a class="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium rounded-lg px-3 py-2 flex items-center gap-3 scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="Science">science</span>
+<span class="font-label-sm text-label-sm">Lõi chức năng</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="layers">layers</span>
+<span class="font-label-sm text-label-sm">Màng RO</span>
+</a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all scale-95 active:scale-100" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Linh kiện</span>
+</a>
+</nav>
+<div class="mt-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+<button class="w-full py-3 bg-secondary-container text-on-secondary-container rounded-lg font-button text-button hover:brightness-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">request_quote</span>
+                        Yêu cầu báo giá
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Product Grid Section -->
+<section class="flex-1">
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<nav class="flex items-center gap-2 text-slate-400 text-sm mb-2">
+<span>Sản phẩm</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-medium">Lõi chức năng</span>
+</nav>
+<h1 class="font-h2 text-h2 text-on-surface">Lõi lọc chức năng</h1>
+<p class="text-on-surface-variant max-w-2xl mt-2">Nâng cấp nguồn nước của bạn với các lõi bổ sung khoáng chất, cân bằng pH và diệt khuẩn tối ưu.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm text-slate-500">Sắp xếp:</span>
+<select class="bg-white border-outline-variant rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>Phổ biến nhất</option>
+<option>Giá thấp đến cao</option>
+<option>Giá cao đến thấp</option>
+<option>Mới nhất</option>
+</select>
+</div>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card: Mineral Filter -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="Mineral Filter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A professional high-resolution studio photograph of a premium Mineral water filter cartridge with a clean white casing and blue ends. The lighting is bright and clinical, reflecting a sense of purity and technological reliability. Set against a soft blue gradient background that mimics the refractive properties of clean water with subtle bokeh effects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9O71ObesuSd2b-xrul7zG93lw6hCReJYcjmfoPwwDD5BkrgIlVkngaGrD3b7-8iDT1HfpEIZ65n41whOj1pK0snPRSZEBGGDrjYmPIZLHLveb-btvUZk1siSWmgmXA6IGvqBFw9WzXLSMefmh8cHOM6tIVOvKUjzLqTeJQpEYwdQjTMBbd9Pu8ZEAxI71obe08wp1WOdsd61NkhnooeLDhJB7LlVVh_GIfUJSo30IMt-p2i8-qQY8oD6cRcwnRFwMqFzlJuYXdWA"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-fixed-dim/20 text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-secondary-container">Bán chạy</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            ISO Certified
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi Mineral (Khoáng đá)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Bổ sung các khoáng chất thiết yếu như Ca, Mg, Na, K giúp nước có vị ngọt tự nhiên và tốt cho sức khỏe.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">250.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card: T33 Filter -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="T33 Filter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A detailed commercial shot of a T33 Carbon filter for water purification systems. The product features a sleek, clinical design with clear labeling. The setting is a minimalist, modern lab environment with cool daylight and soft shadows, emphasizing health and high-standard filtration technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmY_6cN2Lw7kPRJrwbZYDp0Oq4Mt24qjlBZ92AgcEmsCLzkKPn8p5zMN-wxTHo3XBkWag-vnuIhewUZWAJObKF5uu8Mz7uMUDBtaOMV-VqlYaqSwcRhsX0osXhOQM7Al2YJIAvQNhA4r9r-a7zUrtoMEdkVwsiul0j_SYMhQy3a6mLjFtjtn8ksgcihFZmtWeueLjFn4WecTmUJ63DhQSkiXvp-WtkwKXRXLVPtV8iVN_ceNHwlNUOBU7fkopf3eJ9ZW5h4gN81IA"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+                            Organic Carbon
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi T33 GAC (Than hoạt tính)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Loại bỏ màu, mùi, cân bằng độ pH và cải thiện vị nước giúp nước trong lành hơn.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">180.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card: Alkaline Filter -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="Alkaline Filter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="An elegant, clean product presentation of an Alkaline water filter. The lighting is ethereal and bright, symbolizing pure alkaline water. The design is modern and minimalist with premium blue accents, placed on a white marble surface that reflects a corporate and professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEjomwvBchwoPDF-bbY9Rg4eW91GEzQngQ6aSyEW9LdyqVYNAsR8W091sUXwVe5zxAkYiUpJPM-8bDmb68nhiqFyHoPu18QnPPeXhJxqgHEYHpkygzckI9h8IpYMqWzEQ-LouX_gyA0Qz9Km31R0iaC4GrWxHI4ZpOa0FtfTOMfAWIBmvQ67V-I9mkDHMc-Ug7rQ1B1b_ighI0JZUnkVLFKTGseKF_FZ9-5ZMm_2w7ihide5gmOcxg7RyMOv5Ez827gqr42Zjyhug"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+                            99.9% Purity
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi Alkaline (Tạo kiềm)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Giảm ORP, tạo nước kiềm tính giúp trung hòa axit dư thừa trong cơ thể, hỗ trợ tiêu hóa.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">320.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card: Nano Silver -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="Nano Silver" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A technologically advanced Nano Silver water filter cartridge showcased in a clean, brightly lit corporate setting. The product has metallic silver elements and a precise, clinical appearance. Soft ambient blue shadows create a multi-layered, floating effect on a pristine white background, conveying environmental health and safety." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGmZrCgt7MI_ccffNAhaJ1M_oB02-CwFvjAu2ebab9rA1HvB5U34WXoJBQIZzWM1TPhRK7Wha-Uxtg9O8yL6fOFLFiHKItyVQu0YPMGTLZOgrnF-3ZGYQXV6wng9WlStWmILCVN9ZYj32s2zFiuQu4bdCD7ZGW1EmoBzk9CAFxKOQhJl8Lec7OdD8qsfSffqAo0j08w9znJ2optvFgHp7WIguIF-KGKPiLZRGlaUn6UYKqSh6h-xcusUnkiFrxrSXpK_Asl4TqSkw"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shield</span>
+                            Anti-Bacterial
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi Nano Silver (Diệt khuẩn)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Công nghệ bạc Nano giúp tiêu diệt 99,99% vi khuẩn và chống tái nhiễm khuẩn cho nước.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">280.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card: Hydrogen -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="Hydrogen Filter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Modern Hydrogen water filter cartridge featuring a blue and white minimalist design. The image is captured in a high-key lighting environment that emphasizes the clarity and breathability of the design. The mood is serene and technologically sophisticated, with soft blue tonal layers in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC3KxDjb9BwTCx5Bu5wkXP9VoO5HnYY294MgeiVUXaNLODirVkGFl33Ep0VtBCyzCiikkvYVRFjJNeHo8sBAn3Q_FSIbXNcOoAJZOJkg7MykPofyh11GUmpIKsWw6EKhMNlPFX-74kSvdKpVsBZSh_jI4hcasu5qLsqVX6Ce80ins2EEPejExv8Z-RuRXQujq0cRWqDhnSXKfOLry2sBh9BAlqI_Jkj_qoEU4GsyXAWTlq-A56w42tDmyIbYRm4LcL0L8bbohxq3g"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            Active Energy
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi Hydrogen (Chống Oxy hóa)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Tạo nước giàu Hydro hoạt tính, giúp chống lão hóa và loại bỏ các tác nhân gây oxy hóa mạnh.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">450.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card: Ceramic -->
+<div class="group glass-card rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 flex flex-col">
+<div class="relative h-64 overflow-hidden bg-white p-6">
+<img alt="Ceramic Filter" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A clean, minimalist shot of a white Ceramic water filter. The product stands out with its smooth texture and professional build quality. The background uses generous whitespace and a very soft blue-tinted shadow technique to convey premium quality and modern technology in a corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlRKP8W5Ku_QdNvZMnZqflwzgBeKhOQyw66wvfhpdp7BPhcZwE5dnSShfDf7T4ZRbPvco0U_u28eU8kyU4tEVAVaGg4jWyw6xdSBisoE4yn55itQnwWgVKrwlWktIN6CXsNI0vArINRXMlNwawdKTttzolDb_LQ_WrEfNSoi2JS39yfb-_QQuBNv_7CBNpVnQ3sYEtY53V_49ELHF60jncFapdQzv3RFIpbbK6qdlJyX90Rf3es_4CO_sT3aK_QpmZXYLaHRdX4c4"/>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center gap-1 text-secondary font-semibold text-xs mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">waves</span>
+                            Micro Filtration
+                        </div>
+<h3 class="font-h3 text-h3 text-on-surface mb-2 group-hover:text-primary transition-colors">Lõi Ceramic (Gốm vi lọc)</h3>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Lọc sạch các tạp chất có kích thước siêu nhỏ, vi khuẩn và kim loại nặng một cách hiệu quả.</p>
+<div class="mt-auto pt-4 border-t border-blue-50 flex items-center justify-between">
+<div class="text-primary font-bold text-lg">220.000đ</div>
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-lg flex justify-center items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-slate-400 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-slate-600 hover:text-primary hover:border-primary transition-all">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-slate-600 hover:text-primary hover:border-primary transition-all">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant text-slate-400 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 mt-xl transition-colors duration-200">
+<div class="max-w-7xl mx-auto py-12 px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-lg font-bold text-blue-700 dark:text-blue-400 mb-4">Lọc nước Thanh Hiền</div>
+<p class="text-slate-500 text-sm leading-relaxed">Đơn vị uy tín hàng đầu trong lĩnh vực giải pháp xử lý nước sạch tại Việt Nam, mang đến sức khỏe cho mọi gia đình.</p>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface mb-4">Sản phẩm</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Lõi lọc nước</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Máy lọc nước RO</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Hệ thống lọc tổng</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Phụ kiện thay thế</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface mb-4">Dịch vụ</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Chính sách bảo hành</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Hướng dẫn lắp đặt</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Hỗ trợ kỹ thuật</a></li>
+<li><a class="hover:text-blue-500 underline transition-colors" href="#">Hệ thống cửa hàng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold text-on-surface mb-4">Liên hệ</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">phone</span>
+                            0900.XXX.XXX
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">mail</span>
+                            info@thanhhienwater.vn
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                            Hà Nội, Việt Nam
+                        </li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="text-xs md:text-sm text-slate-500">© 2024 Lọc nước Thanh Hiền. Giải pháp nước sạch tiêu chuẩn ISO.</div>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">thumb_up</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">play_circle</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
