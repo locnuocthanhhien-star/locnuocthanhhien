@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Màng RO - Lọc nước Thanh Hiền</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#b3c5ff",
+                      "error": "#ba1a1a",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-surface": "#0b1c30",
+                      "on-secondary-container": "#00714d",
+                      "tertiary": "#285d82",
+                      "outline": "#727687",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#424656",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-primary-container": "#f8f7ff",
+                      "surface-container": "#e5eeff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#6cf8bb",
+                      "on-background": "#0b1c30",
+                      "surface-dim": "#cbdbf5",
+                      "surface": "#f8f9ff",
+                      "surface-container-low": "#eff4ff",
+                      "on-tertiary-fixed": "#001e30",
+                      "inverse-on-surface": "#eaf1ff",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#dae1ff",
+                      "surface-tint": "#0054d6",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "surface-container-high": "#dce9ff",
+                      "primary": "#0050cb",
+                      "on-primary-fixed": "#001849",
+                      "background": "#f8f9ff",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#d3e4fe",
+                      "surface-bright": "#f8f9ff",
+                      "tertiary-fixed-dim": "#9bccf6",
+                      "on-primary-fixed-variant": "#003fa4",
+                      "on-tertiary-container": "#f3f8ff",
+                      "on-error": "#ffffff",
+                      "primary-container": "#0066ff",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#0e4b6f",
+                      "secondary-fixed": "#6ffbbe",
+                      "outline-variant": "#c2c6d8",
+                      "tertiary-container": "#44769c",
+                      "on-secondary-fixed": "#002113",
+                      "secondary": "#006c49",
+                      "tertiary-fixed": "#cbe6ff",
+                      "inverse-surface": "#213145"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "80px",
+                      "lg": "48px",
+                      "base": "4px",
+                      "sm": "16px",
+                      "gutter": "24px",
+                      "md": "24px",
+                      "xs": "8px",
+                      "container-max": "1280px"
+              },
+              "fontSize": {
+                      "label-sm": ["13px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "button": ["16px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased font-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md dark:bg-slate-900/80 border-b border-blue-100/50 dark:border-blue-900/50 shadow-sm shadow-blue-500/5 transition-all duration-300 ease-in-out font-inter antialiased tracking-tight">
+<nav class="flex justify-between items-center h-16 px-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="text-xl font-bold text-blue-700 dark:text-blue-400" href="#">Lọc nước Thanh Hiền</a>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Trang chủ</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1" href="#">Sản phẩm</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Giải pháp</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Tin tức</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Liên hệ</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 ml-2" placeholder="Tìm kiếm linh kiện..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-slate-600 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 text-slate-600 hover:text-blue-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="hidden md:block bg-primary text-on-primary px-5 py-2.5 rounded-full font-button text-sm hover:bg-primary-container transition-all shadow-md shadow-primary/20">
+                        Tư vấn ngay
+                    </button>
+</div>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto flex gap-gutter pt-8 pb-xl px-6">
+<!-- SideNavBar -->
+<aside class="hidden md:block w-64 h-fit sticky top-24 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800 transition-transform">
+<div class="flex flex-col gap-4 p-6 font-inter text-sm">
+<div class="mb-2">
+<h3 class="text-on-surface font-bold text-lg">Danh mục sản phẩm</h3>
+<p class="text-slate-500 text-xs">Lọc nước tinh khiết</p>
+</div>
+<nav class="space-y-1">
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined text-blue-600" data-icon="filter_alt">filter_alt</span>
+                        Lõi lọc thô
+                    </a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined text-blue-600" data-icon="Science">science</span>
+                        Lõi chức năng
+                    </a>
+<a class="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium rounded-lg px-3 py-2 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-blue-600" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
+                        Màng RO
+                    </a>
+<a class="text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-2 flex items-center gap-3 transition-all" href="#">
+<span class="material-symbols-outlined text-blue-600" data-icon="settings">settings</span>
+                        Linh kiện
+                    </a>
+</nav>
+<div class="mt-8 p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-xs text-slate-600 mb-3">Cần hỗ trợ kỹ thuật chọn màng RO phù hợp?</p>
+<button class="w-full bg-white dark:bg-slate-900 text-blue-700 border border-blue-200 py-2 rounded-lg font-button text-xs hover:bg-blue-50 transition-colors">
+                        Yêu cầu báo giá
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Product Content -->
+<section class="flex-1">
+<!-- Header section with Glassmorphism -->
+<div class="relative overflow-hidden rounded-3xl bg-primary mb-12 p-12 text-on-primary">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 bg-gradient-to-l from-white to-transparent"></div>
+<div class="relative z-10 max-w-2xl">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm uppercase mb-4 inline-block">Công nghệ lọc thẩm thấu ngược</span>
+<h1 class="font-h1 text-h1 mb-4 leading-tight">Màng RO Tinh Khiết</h1>
+<p class="text-body-lg opacity-90 mb-8">Trái tim của máy lọc nước. Loại bỏ 99.9% vi khuẩn, kim loại nặng và tạp chất hòa tan. Đảm bảo nguồn nước chuẩn tinh khiết uống trực tiếp.</p>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span class="text-xs font-medium">Chính hãng 100%</span>
+</div>
+<div class="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+<span class="material-symbols-outlined text-sm" data-icon="speed">speed</span>
+<span class="text-xs font-medium">Công suất cao</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3 mb-8">
+<button class="px-5 py-2 rounded-full bg-primary text-white font-medium text-sm">Tất cả</button>
+<button class="px-5 py-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant font-medium text-sm">Filmtec (USA)</button>
+<button class="px-5 py-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant font-medium text-sm">Karofi (Purifim)</button>
+<button class="px-5 py-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant font-medium text-sm">Màng 50 GPD</button>
+<button class="px-5 py-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant font-medium text-sm">Màng 100 GPD</button>
+<button class="px-5 py-2 rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant font-medium text-sm">Màng công nghiệp</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500">
+<div class="relative h-64 bg-slate-50 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Màng RO Filmtec USA" class="max-h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A professional studio product photograph of a high-end RO membrane filter element. The filter is a distinctive cylindrical shape with blue wrapping and white caps, sitting on a pristine, reflective white surface. The lighting is bright and airy with soft blue ambient shadows, creating a clinical and pure laboratory aesthetic. High-resolution details show the fine textures of the filtration material and the professional branding on the label." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdjLHrgahWBcdxt-m4fr26FpoqznwA1aG1fSG9KVvI7T3sBJMr8G61X_CrpF8yKv_1CafjUqZuEiwecWZDrTmAGrdqaKdcwOdSy7neAC1EVgZGbYGspueKubOCkB2JOMDuiqltBcC_Ov238V8wOjrMz9ZMvOMfXh4BkWxhqKUY_gtKfiIdc0GuXAEeGy9p5RY-jmjv9QD8vPKChB12aB9BAIlTLQfM7NkG-B6zA2s43V-hhbBsDyhhIu5zzG0zNtvs6dR-WhYNAaw"/>
+<div class="absolute top-4 left-4">
+<span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Bán chạy</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-lg text-on-surface group-hover:text-primary transition-colors">Màng RO Filmtec 50 GPD</h3>
+<div class="flex items-center text-secondary-container bg-secondary/10 px-2 py-1 rounded text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="shield">shield</span>
+                                USA
+                            </div>
+</div>
+<div class="flex gap-4 mb-4">
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">7.9 L/h</span>
+                                Công suất
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">99.9%</span>
+                                Tỷ lệ lọc
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">24-36T</span>
+                                Tuổi thọ
+                            </div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-slate-50">
+<div>
+<span class="block text-xs text-slate-400 line-through">650.000đ</span>
+<span class="text-xl font-bold text-primary">450.000đ</span>
+</div>
+<button class="bg-surface-container-low text-primary p-2 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500">
+<div class="relative h-64 bg-slate-50 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Màng RO Purifim Karofi" class="max-h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A detailed close-up shot of a modern RO membrane housing and filter, showcasing technical excellence. The product is clean white with vibrant blue accents, illuminated by bright, clinical studio lighting. The background is a soft, minimalist grey-blue gradient that emphasizes the concept of water purity and high technology. The focus is sharp on the structural ribs and industrial-grade seals of the membrane." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJ33OIBsrg1fBfEwRnbAbKwXPj1estmmKHuvTarklxFC3GLq-VJT4SwPIGWKypUShdxLiKjSmQ0JTytvNfnA2XQ7tEbU3_TP4SnlqEacuW7z_rKUEFvVCTfbyTuoGQBXNbVEkgA0Lk6ebN4dizIw8HhdCirtVC9Ryx2VfjNyQpj4l9sPnyzsWZi407sXLre2GDmUPv0ejmtfz0EkTcx9ZlZxx7R_UKaNU9WlFjGcRrhMVAgoUkJKJh5XHS_SC0g6uD6IN_658Rqs"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Mới về</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-lg text-on-surface group-hover:text-primary transition-colors">Màng Purifim 100 GPD</h3>
+<div class="flex items-center text-blue-600 bg-blue-50 px-2 py-1 rounded text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="verified_user">verified_user</span>
+                                KAROFI
+                            </div>
+</div>
+<div class="flex gap-4 mb-4">
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">20 L/h</span>
+                                Công suất
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">S3 Hàn Quốc</span>
+                                Công nghệ
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">1.5 Năm</span>
+                                Bảo hành
+                            </div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-slate-50">
+<div>
+<span class="block text-xs text-slate-400 line-through">850.000đ</span>
+<span class="text-xl font-bold text-primary">680.000đ</span>
+</div>
+<button class="bg-surface-container-low text-primary p-2 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500">
+<div class="relative h-64 bg-slate-50 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Màng RO 4040 Công Nghiệp" class="max-h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="An industrial-scale RO membrane filter, model 4040, displayed in a high-tech warehouse environment. The large blue cylindrical filter features professional stainless steel fittings and clear technical labeling. The environment is clean and professional, with bright overhead lighting casting soft reflections on the industrial surfaces. The mood is one of reliable engineering and heavy-duty water treatment capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1aaMmVMOGjciox12ey7j9r_w3Fn0Zc6p8oMOH8eC_L-H4WXBiEqqE4X_0E3FBCTMiYd9Jjbw8TSWXi-WHHQrM0jNoDlyVutxnQloc2JyRheaSAUmij210SD6TVj-VW-qQFkp8grQ-Jg39mtGsaQztOuzY-KwDkvkkUg8LUnCg_ThREvRajJwh7GftPoN04S6qrESnj_Ssxy1XjHX6T4T-6RA42rzzw3v48ClYJuXLovF8BJuwYWoYhe1iRqBlxQL49TJnbX4B_jg"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-lg text-on-surface group-hover:text-primary transition-colors">Màng RO 4040 (LP)</h3>
+<div class="flex items-center text-slate-600 bg-slate-100 px-2 py-1 rounded text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="factory">factory</span>
+                                Vontron
+                            </div>
+</div>
+<div class="flex gap-4 mb-4">
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">250 L/h</span>
+                                Công suất
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">LP-21</span>
+                                Áp thấp
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">ISO 9001</span>
+                                Tiêu chuẩn
+                            </div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-slate-50">
+<div>
+<span class="text-xl font-bold text-primary">2.450.000đ</span>
+</div>
+<button class="bg-surface-container-low text-primary p-2 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500">
+<div class="relative h-64 bg-slate-50 flex items-center justify-center p-8 overflow-hidden">
+<img alt="Màng RO Kangaroo" class="max-h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="A premium water filter cartridge shown in a bright, modern kitchen setting. The filter is crisp white and blue, positioned in a way that suggests easy installation. The lighting is warm and natural, suggesting a healthy home environment. The background shows soft-focus elements of a clean, minimalist kitchen with light wood and white surfaces. The aesthetic is domestic, safe, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCQQHTYR4ljCKYqBhvWjMBb3Jw8Oq5ezLu4abwF8YCNvt2GK7aO00nUK2MDVgSAr6YaEUmWK5-2Z-d6HodhRlQhxfsHTtWy0Rqt7mGnccoWZqplsLUtdl9aF6t7eXTmUDr5pm_e_M8JLa43DnyyXnYexgMMXb9QExT8kvGe68jHb50pHpGHy0S8XMvdcTZxxTI7aSKIEme3rZbsGSmG3RSCzLBSg8l8YikO52cUOKw_TE8jcoMMNMWmgKeb8_pDuYE7G443DnC-RM"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-h3 text-lg text-on-surface group-hover:text-primary transition-colors">Màng RO Kangaroo 50 GPD</h3>
+<div class="flex items-center text-green-600 bg-green-50 px-2 py-1 rounded text-[10px] font-bold">
+<span class="material-symbols-outlined text-[12px] mr-1" data-icon="stars">stars</span>
+                                KANGAROO
+                            </div>
+</div>
+<div class="flex gap-4 mb-4">
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">10 L/h</span>
+                                Công suất
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">Thẩm thấu</span>
+                                Nguyên lý
+                            </div>
+<div class="text-xs text-slate-500">
+<span class="block font-semibold text-slate-700">2 năm</span>
+                                Độ bền
+                            </div>
+</div>
+<div class="flex items-center justify-between mt-6 pt-4 border-t border-slate-50">
+<div>
+<span class="text-xl font-bold text-primary">550.000đ</span>
+</div>
+<button class="bg-surface-container-low text-primary p-2 rounded-xl group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined" data-icon="add_shopping_cart">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center items-center gap-2">
+<button class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-primary text-white font-semibold">1</button>
+<button class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">3</button>
+<button class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Trust Section (Asymmetric Bento) -->
+<section class="bg-surface py-xl">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="font-h2 text-h2 mb-12 text-center">Tại sao nên chọn Màng RO tại Thanh Hiền?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white p-8 rounded-3xl border border-blue-50 flex items-center gap-8 shadow-sm">
+<div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="high_quality">high_quality</span>
+</div>
+<div>
+<h4 class="font-h3 text-xl mb-2 text-primary">Cam kết chính hãng 100%</h4>
+<p class="text-slate-600">Chúng tôi chỉ phân phối màng RO từ các thương hiệu hàng đầu thế giới như Dow Filmtec (USA), Purifim (USA-Korea). Có đầy đủ CO, CQ và mã QR kiểm tra thật giả.</p>
+</div>
+</div>
+<div class="bg-primary p-8 rounded-3xl text-on-primary shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="engineering">engineering</span>
+<h4 class="font-h3 text-xl mb-2">Hỗ trợ thay thế tận nơi</h4>
+<p class="text-sm opacity-80 leading-relaxed">Đội ngũ kỹ thuật viên giàu kinh nghiệm sẵn sàng hỗ trợ kiểm tra chất lượng nước và thay màng RO tại nhà, đảm bảo máy hoạt động tối ưu nhất.</p>
+</div>
+<div class="bg-secondary p-8 rounded-3xl text-on-secondary shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="speed">speed</span>
+<h4 class="font-h3 text-xl mb-2">Đo chỉ số TDS miễn phí</h4>
+<p class="text-sm opacity-80 leading-relaxed">Khi mua màng RO, khách hàng được tặng kèm dịch vụ đo chỉ số tinh khiết (TDS) của nước trước và sau khi thay màng để kiểm chứng hiệu quả.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container-highest p-8 rounded-3xl border border-blue-100 flex items-center gap-8 shadow-sm">
+<div class="w-24 h-24 bg-white/50 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-blue-700" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h4 class="font-h3 text-xl mb-2 text-on-surface">Bảo hành linh hoạt</h4>
+<p class="text-slate-700">Chính sách 1 đổi 1 nếu phát hiện lỗi từ nhà sản xuất. Tư vấn chu kỳ thay thế dựa trên thực tế nguồn nước và nhu cầu sử dụng của gia đình bạn.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 font-inter text-xs md:text-sm">
+<div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="max-w-md">
+<a class="text-lg font-bold text-blue-700 dark:text-blue-400" href="#">Lọc nước Thanh Hiền</a>
+<p class="mt-4 text-slate-500 leading-relaxed">Chuyên gia giải pháp nước sạch toàn diện. Cung cấp máy lọc nước, linh kiện chính hãng và dịch vụ bảo trì chuyên nghiệp tại khu vực.</p>
+<div class="flex gap-4 mt-6">
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span></a>
+<a class="text-slate-400 hover:text-primary" href="#"><span class="material-symbols-outlined" data-icon="call">call</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors" href="#">Chính sách bảo hành</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors" href="#">Hướng dẫn lắp đặt</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors" href="#">Hỗ trợ kỹ thuật</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 underline transition-colors" href="#">Hệ thống cửa hàng</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-slate-50 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-400">© 2024 Lọc nước Thanh Hiền. Giải pháp nước sạch tiêu chuẩn ISO.</p>
+<div class="flex gap-6">
+<img alt="ISO 9001" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6yl1fFCxxSfSqqPgqfKgBGQSEirm35PTJEqe7QM6U1LBlSH6L4fEGAka--yLIRgVzl1Djs3qGnaw2rph6ZJ43lDxS51A7DjKeKOw8q4c52H-Zx2b5vao88TFcbarVIbx6XoYRAKDT-NfUZE-rIzYe2wAlvuu1n004EE_Hrv8RbCo0lvtHCAICs_cdPZYj_esbWlR5mrp8rvAphMb4BmIIitSlwEL9YrD_nALIsflZbwI9a2Cmcfjdo7QftfbgrVYYL8jFH2FcgQI"/>
+<img alt="WQA Certification" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxdT20LStDpWP_N3yc_NOSuySceR1iJ-8bNqgjL8OdHAszv5_sn-FsZZHuC3M4u37AS3nlweue5RsfZ_IlfrSL8C5kTHsYQnZuO3wu0-EWXh2-bU53wB1VnHrOOHItrQ2PMxYlIWENxiazu312Ip8M4We-GDubnWpnJ9x_ToZ8dXgdiU4eya4wAmwzBRjpvxLwUcL5miugRRPiKH3YKSDc-Z3SRv0dkzNTEQA9-X6a3jnrDS920I3XRlqwUT3X3AyVbgz12RDfC9U"/>
+</div>
+</div>
+</footer>
+<!-- FAB for direct contact (Contextual only for product browse) -->
+<div class="fixed bottom-8 right-8 flex flex-col gap-4">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group relative">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="absolute right-16 bg-white text-primary px-3 py-1 rounded-lg shadow-md whitespace-nowrap font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity">Chat với kỹ thuật</span>
+</button>
+<button class="w-14 h-14 bg-secondary text-on-secondary rounded-full shadow-lg shadow-secondary/40 flex items-center justify-center hover:scale-110 active:scale-95 transition-transform group relative">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+<span class="absolute right-16 bg-white text-secondary px-3 py-1 rounded-lg shadow-md whitespace-nowrap font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity">Hotline hỗ trợ</span>
+</button>
+</div>
+</body></html>
